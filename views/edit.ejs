@@ -1,0 +1,12 @@
+<%- include("includes/head.ejs") %>
+<form action="/chats/<%=Data._id%>?_method=PUT" method="post">
+    <h3>Edit Message</h3>
+    <p>from: <%=Data.from %></p>
+    <p>Sent to : <%= Data.to %></p>
+    <textarea name="message" class="btnForm" cols="30" rows="10" required><%=Data.message%></textarea>
+    <br><br>
+    <button class="btnForm">submit</button>
+</form>
+    
+</body>
+</html>

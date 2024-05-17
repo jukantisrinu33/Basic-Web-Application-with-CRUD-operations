@@ -1,0 +1,16 @@
+<%- include("includes/head.ejs") %>
+<h3>You are going to send a message</h3>
+<form action="/chats" method="post">
+    <p>Enter you name<p>
+    <input class="btnForm" type="text" name="from" placeholder="Enter your name" required>
+    <p>Enter the receiver name<p>
+    <input class="btnForm" type="text" name="to" placeholder="Enter receiver name" required>
+    <p>Enter Message</p>
+    <input class="btnForm" type="text" name="message" placeholder="Enter message" required>
+    <br>
+    <br><br>
+    <button class="btnForm">Submit</button>
+</form>
+    
+</body>
+</html>

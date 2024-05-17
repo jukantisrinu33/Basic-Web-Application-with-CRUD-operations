@@ -1,0 +1,24 @@
+body
+{
+    margin-left: 20px;
+}
+.main
+{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.message
+{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.btnForm
+{
+    background-color: aliceblue;
+    border: 2px solid dodgerblue;
+    border-radius: 5px;
+}

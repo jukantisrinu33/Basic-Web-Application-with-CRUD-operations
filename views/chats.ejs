@@ -1,0 +1,29 @@
+<%- include("includes/head.ejs") %>
+<h3>All Chats!</h3>
+<% for(let i=0;i<Data.length;i++){  %>
+    <div class="main">
+        <p>from : <b><i><%=Data[i].from ;%></i></b></p>
+        <p class="message"><%= Data[i].message; %></p>
+        <p>Received by <b><i><%=Data[i].to;%></i></b></p>
+        <p><%=Data[i].created_at.toString().split(" ")[4] %></p>
+        <p><%= Data[i].created_at.toString().split(" ").slice(0,4).join(" ") %></p>
+        <form action="/chats/<%= Data[i]._id%>/edit">
+            <button class="btnForm">Edit</button>
+        </form>
+        <br>
+        <form action="/chats/<%=Data[i]._id%>?_method=DELETE" method="post">
+            <button id="delete" class="btnForm">Delete</button>
+        </form>
+        <br>
+        <!-- <form action="/chats/<%= Data[i]._id%>" method="get">
+        <button class="btnForm">show</button>
+        </form> -->
+    </div>
+    <% } %>
+    <form action="/chats/new" method="get">
+        <br>
+        <button class="btnForm">Create a new chat</button>
+    </form>
+
+</body>
+</html>
